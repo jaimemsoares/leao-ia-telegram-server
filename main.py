@@ -20,12 +20,8 @@ def send_telegram_message(text):
 def webhook():
     message = request.get_data(as_text=True)
     if message:
-        send_telegram_message(f"""📢 *Alerta do LEÃO IA 🦁:*
+        send_telegram_message(f"📢 Alerta do LEÃO IA 🦁: {message}")
 
-{message}""")
-
-
-{message}")
     return "OK", 200
 
 if __name__ == "__main__":
