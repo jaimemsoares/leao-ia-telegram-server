@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: leao-ia-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: BOT_TOKEN
+        value: SEU_TOKEN_DO_BOT
+      - key: CHAT_ID
+        value: SEU_CHAT_ID
